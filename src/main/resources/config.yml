@@ -1,0 +1,51 @@
+# HeadHunter - coslant
+# https://github.com/coslant/HeadHunter
+#
+# Yer tutucular:
+#   %victim%     olen oyuncu          %victim_in%  ilgi ekli hali (coslant'in)
+#   %killer%     olduren oyuncu       %killer_in%  ilgi ekli hali
+#   %date%       olum tarihi
+
+enabled: true
+
+# Kafa dusme sansi, yuzde olarak (0 - 100). Ondalik yazabilirsin: 12.5
+chance: 100.0
+
+# true  = yalnizca bir oyuncu oldurdugunde kafa duser
+# false = dusme, bogulma gibi olumlerde de duser
+only-player-kills: true
+
+# Oyuncu kendini oldururse kafa dussun mu
+count-suicide: false
+
+# true  = kafa dogrudan katilin envanterine gider
+# false = olum yerine duser
+give-to-killer: false
+
+# Bu dunyalarda hic kafa dusmez
+disabled-worlds: []
+
+# only-player-kills: false iken katil yerine yazilacak isim
+unknown-killer: "Bilinmeyen"
+
+date-format: "dd.MM.yyyy HH:mm"
+
+name: "&e%victim_in% Kafasi"
+
+lore:
+  - "&7%killer% &7tarafindan katledildi."
+  - "&8%date%"
+
+# Mob kafalari (iskelet, zombi, creeper...) - varsayilan olarak kapali
+mob-heads:
+  enabled: false
+  chance: 5.0
+  name: "&e%mob% Kafasi"
+  lore:
+    - "&7Nadir bir ganimet."
+
+messages:
+  # Bos birakirsan duyuru yapilmaz
+  announce: ""
+  reloaded: "&aHeadHunter ayarlari yeniden yuklendi."
+  no-permission: "&cBunun icin yetkin yok."
